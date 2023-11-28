@@ -1,2 +1,2 @@
-let strrr = "ASDASDASD";
-console.log(strrr.toLowerCase());
+let resource = "https://swapi.py4e.com/api/"
+console.log(!resource.includes("https:/"))
