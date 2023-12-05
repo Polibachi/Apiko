@@ -24,7 +24,7 @@ const newUser = {
     email: "usermail@gmail.com"
    };
     
-   fetch(baseUrl, {
+   function post (){fetch(baseUrl, {
         method: 'POST',
         body:newUser
    }).then((response) => {
@@ -36,5 +36,20 @@ const newUser = {
    }).then((data) => {
     console.log(data);
 
-});
+});}
 
+//post();
+//ids = []
+function getSpecifiedAlbums() {
+    fetch(url)
+    .then((response) => {
+        if(response.ok){
+            return response.json();
+        }else{
+            console.log(response.status);
+        }
+        
+    }).then((data) => {
+        console.log(data);
+    })
+   }

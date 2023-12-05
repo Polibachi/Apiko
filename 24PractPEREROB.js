@@ -1,36 +1,34 @@
-class Calculator {
-    constructor(a, b){
-        this.a = a;
-        this.b = b;
-    }
+function calculator() {}
 
-    sum(a,b) {
-        console.log(this.a+this.b);
+calculator.prototype.sum = (a,b) => {  
+        console.log(a+b);
       }
 
-    substract(a,b) {
-        console.log(this.a-this.b);
+
+      calculator.prototype.substract = (a,b) => {
+        console.log(a-b);
       }
-}
 
-const calc42 = new Calculator(4, 2);
-//calc42.substract();
+  
+const calculator1 = new calculator();
+calculator1.sum(2,4);
+calculator1.substract(4,2);
 
-class AdvancedCalculator extends Calculator{
-    multiply(a,b){
-        console.log(this.a*this.b)
-    }
+function advancedCalculator() {}
+advancedCalculator.prototype = Object.create(calculator.prototype);
 
-    divide(a,b){
-        console.log(this.a/this.b)
-    }
-}
+const advanced = new advancedCalculator();
+advanced.sum(2,2)
 
-const AdvCalc42 = new AdvancedCalculator(4, 2);
-//AdvCalc42.multiply();
+advancedCalculator.prototype.multiply = function(a, b) {
+    console.log(a*b)
+  };
 
-//// zavd2
+  advancedCalculator.prototype.divide = function(a, b) {
+    console.log(a/b)
+  };
 
+  advanced.multiply(4,4)
     
 
 class TodoItem {
@@ -99,7 +97,7 @@ list1.addItem(user3);
 list1.addItem(user4);
 list1.addItem(user5);
 
-console.log(list1.list);
+//console.log(list1.list);
 
 
 list1.getItemById(3);
@@ -109,5 +107,5 @@ list1.getItemById(3);
 list1.removeItemById(user3.id);
 list1.removeItemById(user.id);
 
-//console.log(user3.id);
-console.log(list1.list);
+//console.log(user3.id);s
+//console.log(list1.list);

@@ -5,7 +5,7 @@ function isString (cb, string){
         console.log("Callback is not a function or input value is not a string")
     }
 }
-var someVal =1;
+const someVal =1;
 callback = (string) => {
     console.log(string);
 }
@@ -21,7 +21,7 @@ function Clock (cb) {
 }
 
 getTime = () => {
-    let CurrDate = new Date();
+    const CurrDate = new Date();
     console.log(CurrDate.getHours() + " " + CurrDate.getMinutes()+" " + CurrDate.getSeconds())
 }
 
@@ -48,7 +48,7 @@ class Human {
     } 
 }
 
-petro = new Human("petro");
+const petro = new Human("petro");
 console.log(petro);
 
 petro.cancelDeleting();

@@ -73,8 +73,10 @@ let url2 = 'https://swapi.py4e.com/api/planets';
   
       } catch(error) {
         console.error('Error', error);
+        
       }
    }
+
    //getSkywalkers();
 
    async function fetchSWAPI(resource, throwError) {
@@ -98,7 +100,7 @@ let url2 = 'https://swapi.py4e.com/api/planets';
         }
   
       } catch(error) {
-        console.error(resource, ' Error', error);
+        throw error;
       }
    }
     
@@ -121,3 +123,5 @@ let url2 = 'https://swapi.py4e.com/api/planets';
    }
     
    testFetchSWAPI();
+
+   
